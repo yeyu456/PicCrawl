@@ -40,7 +40,7 @@ class Crawl(object):
         
         try:
             crawl_rep = urllib2.urlopen(crawl_res)
-        except urllib2.IOError, e:
+        except urllib2.HTTPError, e:
             return False
         except urllib2.URLError, e:
             return False
